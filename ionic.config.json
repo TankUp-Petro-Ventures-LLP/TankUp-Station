@@ -1,0 +1,7 @@
+{
+  "name": "Tankup-station",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
