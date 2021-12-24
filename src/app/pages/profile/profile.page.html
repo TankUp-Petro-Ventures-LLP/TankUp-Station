@@ -1,0 +1,111 @@
+<ion-header class="ion-no-border header">
+  <ion-toolbar>
+    <ion-row>
+      <ion-col>
+        <ion-buttons class="menu">
+          <ion-menu-button color="dark" menu="main-menu"></ion-menu-button>
+        </ion-buttons>
+      </ion-col>
+      <ion-col align="center">
+        <ion-title align="center">Profile</ion-title>
+      </ion-col>
+      <ion-col align="right">
+        <img class="nav-logo" src="../../../assets/icon/Group 10424.png">
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="card">
+    <ion-card-content>
+      <form [formGroup]="ionicForm" novalidate>
+        <ion-label position="stacked">
+          Business Name
+        </ion-label>
+        <ion-input formControlName="name" type="text" id='test' disabled="true"></ion-input>
+        <br>
+        <ion-label position="stacked">
+          Name
+        </ion-label>
+        <ion-input formControlName="representative_name" type="text" id='test' [disabled]="isenabled"></ion-input>
+        <span class="error ion-padding" *ngIf="isSubmitted && errorControl.name.errors?.required">
+          Representative Name is required.
+        </span>
+        <span class="error ion-padding" *ngIf="isSubmitted && errorControl.name.errors?.minlength">
+          Representative Name should be min 2 chars long.
+        </span>
+        <br>
+        <ion-label position="stacked">
+          Address
+        </ion-label>
+        <ion-textarea formControlName="address" type="text" id='test' [disabled]="isenabled"></ion-textarea>
+        <span class="error ion-padding" *ngIf="isSubmitted && errorControl.address.errors?.required">
+          Address is required.
+        </span>
+        <span class="error ion-padding" *ngIf="isSubmitted && errorControl.address.errors?.minlength">
+          Address should be min 2 chars long.
+        </span>
+
+        <br>
+        <ion-label position="stacked">
+          Email
+        </ion-label>
+        <ion-input formControlName="email" type="email" id='test' [disabled]="isenabled"></ion-input>
+        <span class="error ion-padding" *ngIf="isSubmitted && errorControl.email.errors?.pattern">
+          Please provide valid email id.
+        </span>
+        <br>
+        <ion-label position="stacked">
+          GST
+        </ion-label>
+        <ion-input formControlName="GST" type="text" required id='test' [disabled]="isenabled">
+        </ion-input>
+        <span class="error ion-padding" *ngIf="isSubmitted && errorControl.GST.errors?.required">
+          GST number is required.
+        </span>
+        <span class="error ion-padding" *ngIf="isSubmitted && errorControl.GST.errors?.pattern">
+          Please Enter valid GST number.
+        </span>
+        <br>
+
+        <ion-label position="stacked">
+          Dealer Code
+        </ion-label>
+        <ion-input formControlName="dealer_code" type="text" required id='test' [disabled]="isenabled">
+        </ion-input>
+        <span class="error ion-padding" *ngIf="isSubmitted && errorControl.dealer_code.errors?.required">
+          Dealer Code is required.
+        </span>
+        <span class="error ion-padding"
+          *ngIf="isSubmitted && (errorControl.dealer_code.errors?.minlength || errorControl.dealer_code.errors?.maxlength)">
+          Please Enter valid dealer number.
+        </span>
+      </form>
+
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+<ion-footer>
+  <ion-row *ngIf="!editEnabled">
+    <ion-col>
+      <ion-button expand="block" (click)="cancel()">
+        CANCEL
+      </ion-button>
+    </ion-col>
+    <ion-col>
+      <ion-button (click)="submitForm()" expand="block">
+        SAVE
+      </ion-button>
+    </ion-col>
+  </ion-row>
+  <ion-row *ngIf="editEnabled">
+    <ion-col>
+      <ion-button type="submit" expand="block" (click)=edit()>
+        EDIT
+        &nbsp;
+        <ion-icon name="pencil"></ion-icon>
+      </ion-button>
+    </ion-col>
+  </ion-row>
+</ion-footer>

@@ -1,0 +1,106 @@
+<ion-header class="ion-no-border header">
+  <ion-toolbar>
+    <ion-row>
+      <ion-col>
+        <ion-buttons class="menu">
+          <ion-menu-button color="dark" menu="main-menu"></ion-menu-button>
+        </ion-buttons>
+      </ion-col>
+      <ion-col align="center">
+        <ion-title align="center">Home</ion-title>
+      </ion-col>
+      <ion-col align="right">
+        <img class="nav-logo" src="../../../assets/icon/Group 10424.png">
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+
+  <div class="padding-content">
+    <div>
+      <h4><b>Welcome, {{user?.name || "-"}}</b></h4>
+      <p class="subheading">Find below a quick summary of your todays expenditure</p>
+    </div>
+    <ion-row class="grey-box">
+      <ion-col size="3">
+        <div class="rounded"><img src="{{reduce}}" alt="Snow" /></div>
+      </ion-col>
+      <ion-col size="6" align="center">
+        <p>Today's Rate: </p>
+        <p class="value-text">₹ {{glance?.rate || 0}}/-</p>
+      </ion-col>
+      <ion-col align="center" class="set-rate">
+        <ion-label (click)="setRate()">change</ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row class="grey-box">
+      <ion-col size="3">
+        <div class="rounded"><img src="{{oiler}}" alt="Snow" /></div>
+      </ion-col>
+      <ion-col size="6" align="center">
+        <p>Today's Sale Qty</p>
+        <p class="value-text">{{glance?.totalQuantity || 0}} ltrs</p>
+      </ion-col>
+    </ion-row>
+    <ion-row class="grey-box">
+      <ion-col size="3">
+        <div class="rounded"><img src="{{money}}" alt="Snow" /></div>
+      </ion-col>
+      <ion-col size="6" align="center">
+        <p>Today's Sale INR</p>
+        <p class="value-text">₹ {{totalRevenue || 0}}</p>
+      </ion-col>
+    </ion-row>
+  </div>
+  <br>
+  <div class="heading">
+    <h6><b>Today's Pending Fillings</b></h6>
+  </div>
+</ion-header>
+
+<ion-content>
+  <ion-refresher style="background-color: #f7f7f7;;" mode="ios" slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content pullingIcon="chevron-down-circle-outline" pullingText="Pull to refresh"
+      refreshingSpinner="circles">
+    </ion-refresher-content>
+  </ion-refresher>
+  <ion-card class="card" *ngFor='let filling of pendingFillings'>
+    <ion-row class="card-header">
+      <ion-col size="0.5">
+        <div class="orange">&nbsp;</div>
+      </ion-col>
+      <ion-col class="vendor" size=7.2>
+        <b>{{filling?.vendor?.name}}</b>
+      </ion-col>
+      <ion-col align="right" class="quantity" size=3.2>
+        <b>{{filling?.quantity || "-"}} Ltrs</b>
+      </ion-col>
+      <ion-col align="right" size="1">
+        <ion-icon class="status" color="primary" *ngIf="filling?.filling_status_id != 1" name="time-outline"></ion-icon>
+        <ion-icon class="status" color="success" *ngIf="filling?.filling_status_id == 1" name="checkmark-circle">
+        </ion-icon>
+      </ion-col>
+    </ion-row>
+    <ion-card-content class="filling">
+      <ion-row>
+        <ion-col class="filling-detail" size="7">
+          <ion-label class="address">
+            Vehicle: <b>{{filling?.vehicle?.number || "-"}}</b>
+          </ion-label>
+        </ion-col>
+        <ion-col size="5" class="filling-detail">
+          <ion-label>
+            Date:
+          </ion-label>
+          <b>{{filling?.selected_time | date: 'dd/MM/yyyy'}}</b>
+        </ion-col>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+  <div class="fuelentData" *ngIf="fillingsLength == 0">
+    <ion-row class="table-content">
+      <ion-col align="left" size="12" class="blank">
+        <ion-label class="no-data">No pending fillings available.</ion-label>
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-content>

@@ -1,0 +1,36 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start" (click)="close()">
+      <ion-icon class="back" name="arrow-back"></ion-icon>
+    </ion-buttons>
+    <ion-title align="center">
+      Set Today's Rate
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-card style="box-shadow: none;">
+    <ion-card-content>
+      <form [formGroup]="ionicForm" novalidate>
+        <ion-label position="stacked">
+          Rate
+        </ion-label>
+        <ion-input formControlName="rate" type="number" required id='test'>
+        </ion-input>
+        <span class="error ion-padding" *ngIf="isSubmitted && errorControl.rate.errors?.required">
+          Rate is required.
+        </span>
+        <span class="error ion-padding" *ngIf="isSubmitted && errorControl.rate.errors?.pattern">
+          Only numerical values allowed.
+        </span>
+      </form>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+<ion-footer style="padding-bottom: 2%;" class="ion-no-border">
+  <ion-toolbar>
+    <ion-button type="submit" expand="block" (click)="submitForm()">
+      SET
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>

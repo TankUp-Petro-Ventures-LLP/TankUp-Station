@@ -1,0 +1,70 @@
+<ion-content>
+  <div class="side-image" align="right">
+    <img src="../../../assets/icon/grey.png">
+  </div>
+  <div align="center">
+    <img class="logo" src="../../../assets/icon/logo.png">
+  </div>
+  <!-- <ion-card class="card"> -->
+  <form class="form" [formGroup]="stationInfo" novalidate (ngSubmit)="signUp()">
+    <ion-input placeholder="Business Name" formControlName="name" id="test"></ion-input>
+    <span class="error ion-padding" *ngIf="isSubmitted && errorControl.name.errors?.required">
+      Name is required.
+    </span>
+    <ion-select id="test" formControlName="oil_company_id" placeholder="Oil Company">
+      <ion-select-option *ngFor="let oilCompany of oilCompanysList" value="{{ oilCompany?.id }}">{{ oilCompany.name }}
+      </ion-select-option>
+    </ion-select>
+    <span class="error ion-padding" *ngIf="isSubmitted && errorControl.oil_company_id.errors?.required">
+      Must have to select oil company.
+    </span>
+    <ion-input placeholder="Authorised Representative" formControlName="representative_name" id="test"></ion-input>
+    <span class="error ion-padding" *ngIf="isSubmitted && errorControl.representative_name.errors?.required">
+      Representative name is required.
+    </span>
+    <ion-input type="number" placeholder="Contact No." formControlName="phone_number" id="test"></ion-input>
+    <span class="error ion-padding" *ngIf="isSubmitted && errorControl.phone_number.errors?.required">
+      Contact no. is required.
+    </span>
+    <span class="error ion-padding" *ngIf="isSubmitted && errorControl.phone_number.errors?.pattern">
+      Please enter valid mobile no.
+    </span>
+    <span class="error ion-padding"
+      *ngIf="isSubmitted && alreadyRegistered && !errorControl.phone_number.errors?.required && !errorControl.contact_no.errors?.pattern">
+      This mobile no. is already registered.
+    </span>
+    <ion-input placeholder="Address" formControlName="address" id="test"></ion-input>
+    <span class="error ion-padding" *ngIf="isSubmitted && errorControl.address.errors?.required">
+      Address is required.
+    </span>
+    <ion-input placeholder="Email" formControlName="email" id="test"></ion-input>
+    <span class="error ion-padding" *ngIf="isSubmitted && errorControl.email.errors?.required">
+      Email is required.
+    </span>
+    <span class="error ion-padding" *ngIf="isSubmitted && errorControl.email.errors?.pattern">
+      Please enter valid email address.
+    </span>
+    <ion-input placeholder="GST" formControlName="gst" id="test"></ion-input>
+    <span class="error ion-padding" *ngIf="isSubmitted && errorControl.gst.errors?.required">
+      GST is required.
+    </span>
+    <span class="error ion-padding" *ngIf="isSubmitted && errorControl.gst.errors?.pattern">
+      Please enter valid GST no.
+    </span>
+    <ion-input placeholder="Dealer code" formControlName="dealer_code" type="number" id="test"></ion-input>
+    <span class="error ion-padding" *ngIf="isSubmitted && errorControl.dealer_code.errors?.required">
+      Dealer code is required.
+    </span>
+    <br>
+    <ion-button class="btn" expand="block" type="submit">
+      Sign Up
+    </ion-button>
+  </form>
+  <!-- </ion-card> -->
+</ion-content>
+<ion-footer>
+  <ion-toolbar align="center">
+    <ion-label class="footer-msg">Already have a account?<b class="signin" (click)="goToLogin()">Sign in</b>
+    </ion-label>
+  </ion-toolbar>
+</ion-footer>

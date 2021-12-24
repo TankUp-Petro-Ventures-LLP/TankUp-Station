@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Tankup Station</string>
+    <string name="title_activity_main">Tankup Station</string>
+    <string name="package_name">station.tankup.co.in</string>
+    <string name="custom_url_scheme">station.tankup.co.in</string>
+</resources>

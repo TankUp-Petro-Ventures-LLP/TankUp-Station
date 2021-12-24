@@ -1,0 +1,279 @@
+{
+  "menu": {
+    "title": "MENU",
+    "home": "Dashboard",
+    "select_customer": "Select Customer",
+    "order": "Create Order",
+    "assignment": "Routing",
+    "vehicle_tracking": "Vehicle Log ",
+    "payments": "Payments",
+    "profile": "My Employees",
+    "filling": "Fillings",
+    "orderList": "Orders",
+    "customers": "My Customers",
+    "driverAttendance": "My Drivers",
+    "pendingOrders": "Pending Orders",
+    "incomingOrders": "Incoming Orders",
+    "completedOrders": "Completed Orders",
+    "cancelledOrders": "Cancelled Orders",
+    "manualRouting": "Manual Routing",
+    "automaticRouting": "Automatic Routing",
+    "commingSoon": "Comming Soon"
+  },
+  "home": {
+    "title": "Dashboard",
+    "totalDelivered": "Delivered Fuel",
+    "totalEarned": "Total Earned",
+    "pending": "Pending Orders",
+    "completed": "Completed Orders",
+    "manageVehicleHeader": "Manage Your Vehicle",
+    "revenue": "Revenue Chart",
+    "vehicleId": "id",
+    "vehicleName": "Name",
+    "dispensed": "Qty Dis: ",
+    "remaining": "Qty Rem: ",
+    "lock": "Lock",
+    "ltrs": " Ltrs",
+    "atg": "ATG",
+    "gps": "GPS",
+    "noLocation": "Unable to fetch location!"
+  },
+  "login": {
+    "header": "Login",
+    "subHeader1": "Enter your registered mobile number",
+    "subHeader2": "below to proceed",
+    "loginTitle": "LOG IN",
+    "signupTitle": "SIGN UP",
+    "forgotPassword": "Forgot/Generate Password",
+    "loginBtn": "LOGIN",
+    "requestOTP": "Request OTP",
+    "signupBtn": "Save & Next",
+    "numberPlaceholder": "Mobile Number",
+    "send": "Verify OTP",
+    "createAccount": "Create account"
+  },
+  "create_vehicle": {
+    "title": "Add Vehicle",
+    "number": "Vehicle Number",
+    "capacity": "Capacity",
+    "driver": "Select Driver",
+    "button": "CREATE"
+  },
+  "filling": {
+    "title": "Filling station",
+    "number": "Vehicle Number",
+    "capacity": "Capacity",
+    "driver": "Select Driver",
+    "button": "CREATE"
+  },
+  "legal": {
+    "title": "Legal"
+  },
+  "create_driver": {
+    "title": "Create Driver",
+    "name": "Driver Name",
+    "username": "Username",
+    "password": "Password",
+    "city": "City",
+    "button": "CREATE"
+  },
+  "forgotPassword": {
+    "title": "Forgot Password",
+    "btn": "FIND"
+  },
+  "otp": {
+    "title": "OTP",
+    "btn": "SUBMIT",
+    "header": "Please Enter The OTP Here.",
+    "button": "VERIFY",
+    "callMe": "Call Me",
+    "resend": "Resend OTP",
+    "pwLoader": "please wait...",
+    "verifyingLoader": "verifying otp...",
+    "sendingLoader": "Sending..."
+  },
+  "changePassword": {
+    "title": "Change Password",
+    "btn": "CHANGE"
+  },
+  "setRate": {
+    "title": "Set Rate",
+    "btn": "SET"
+  },
+  "payment": {
+    "title": "Payment",
+    "totalCurrentDue": "Total Current Due",
+    "totalAdvance": "Total Advance",
+    "customerName": "Customer Name",
+    "amountDue": "Amount Due"
+  },
+  "transaction": {
+    "title": "Transactions",
+    "amount": "Amount: ",
+    "payment_mode": "Payment Mode: ",
+    "date": "Date: ",
+    "unique_id": "Unique Id:",
+    "by": "By: ",
+    "comment": "Comment: "
+  },
+  "profile": {
+    "title": "Profile",
+    "profileHeading": "Personal Details",
+    "name": "Representative Name",
+    "business_name": "Business Name",
+    "address": "Address",
+    "email": "Email:",
+    "phone_number": "Phone No:",
+    "employeeheading": "Employee Details",
+    "role": "Role:",
+    "cancel": "Cancel",
+    "save": "Save",
+    "edit": "Edit",
+    "status": "Active For Recieving OTP"
+  },
+  "employeeForm": {
+    "editTitle": "Edit Employee",
+    "addTitle": "Add Employee",
+    "name": "Name",
+    "role": "Role",
+    "email": "Email",
+    "phone_number": "Phone Number"
+  },
+  "selectCustomer": {
+    "title": "Select Customer",
+    "new": "New Customer",
+    "existing": "Existing Customer"
+  },
+  "createCustomer": {
+    "title": "Create Customer",
+    "editTitle": "Edit Customer",
+    "name": "Name",
+    "phone_number": "Phone Number",
+    "gst": "GST",
+    "city": "City",
+    "email": "Email",
+    "aadhar_number": "Aadhaar Number",
+    "verified_address": "Verified Address",
+    "tankup_commission": "TankUp Commision",
+    "create": "Save"
+  },
+  "existingCustomer": {
+    "title": "My Customers",
+    "submit": "Submit",
+    "quantity": "Quantity",
+    "rate": "Rate",
+    "date": "Date",
+    "time": "Time",
+    "payment_mode": "Payment Mode",
+    "delivery_charge": "Delivery Charge",
+    "deliveryAddressHeading": "Delivery Address",
+    "addAddress": "Add Address",
+    "change": "Change",
+    "add": "Add",
+    "billingHeading": "Billing Address",
+    "billingAddressText": "Same as Delivery Address"
+  },
+  "mainAddress": {
+    "title": "Address",
+    "setLocation": "Search for your location",
+    "currentLocation": "Use Current Location",
+    "savedAddress": "Saved Address",
+    "select": "Select",
+    "edit": "Edit",
+    "delete": "Delete",
+    "searchPlaceholder": "Search for your location"
+  },
+  "ADD_ADDRESS": {
+    "title": "Add Address",
+    "editTitle": "Edit Address",
+    "name": "Contact Person Name*",
+    "number": "Phone Number*",
+    "line1": "Address Line 1*",
+    "line2": "Address Line 2",
+    "landmark": "Landmark",
+    "city": "City*",
+    "pincode": "Postal Code*",
+    "alert": "Something went wrong! Try again.",
+    "state": "State*",
+    "save": "SAVE"
+  },
+  "confirm_address": {
+    "header": "Select Delivery Location",
+    "confirmBtn": "CONFIRM LOCATION",
+    "location": "Your Location"
+  },
+  "mainRouting": {
+    "title": "Assignment",
+    "select_vehicle": "Select Vehicle",
+    "driver": "Driver",
+    "remaining_fuel": "Remaining Fuel",
+    "address": "Address",
+    "quantity": "Quantity",
+    "complete": "Complete",
+    "vehicle": "Vehicle",
+    "time": "Preffered time",
+    "rate": "Rate"
+  },
+  "halfModal": {
+    "title": "Create Filling",
+    "quantity": "Quantity",
+    "rate": "Rate"
+  },
+  "orderList": {
+    "completedOrder": "Completed Orders",
+    "pendingOrder": "Pending Orders",
+    "incomingOrder": "Incoming Orders",
+    "cancelledOrder": "Cancelled Orders"
+  },
+  "vehicleTracking": {
+    "title": "Vehicle Tracking"
+  },
+  "routeList": {
+    "title": "Route List"
+  },
+  "orderDetails": {
+    "title": "Invoice Details",
+    "quantity": "Quantity",
+    "amount": "Amount",
+    "tax": "Tax",
+    "total_amount": "Total Amount",
+    "rate": "Rate"
+  },
+  "orders": {
+    "quantity": "Quantity:",
+    "time": "Preffered time:",
+    "vehicle": "Vehicle: ",
+    "address": "Address: ",
+    "billing_address": "Billing Address: ",
+    "shipping_address": "Shipping Address: ",
+    "date": "Date:",
+    "rate": "Rate:",
+    "route": "Route order",
+    "amount": "Amt:",
+    "tax": "Tax:",
+    "payment": "Payment Mode: ",
+    "qty": "Qty:",
+    "tAmount": "Total Amt: ",
+    "generate_invoice": "Generate Invoice",
+    "view_invoice": "View Invoice",
+    "dCharge": "Delivery:",
+    "download_invoice": "Download Invoice",
+    "by": "By: ",
+    "invoicing": "invoicing...",
+    "invoice": "Invoice: ",
+    "cancelled": "Cancelled"
+  },
+  "driverAttendance": {
+    "title": "My Drivers",
+    "attendance": "Attendance",
+    "username": "Username ",
+    "password": "Password: ",
+    "status": "Active status for the day: "
+  },
+  "filter": {
+    "title": "Filter",
+    "datePlaceholder": "Select date",
+    "btn": "Filter"
+  },
+  "loading": "Please wait..."
+}

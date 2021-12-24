@@ -1,3 +1,62 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-menu menuId="main-menu" content-id="main" swipeGesture="false">
+    <ion-content>
+      <ion-row *ngIf="user">
+        <ion-col size=2.5>
+          <img width="100%" src="../assets/icon/tankround.png">
+        </ion-col>
+        <ion-col size=8.5 class="vendor-name">
+          <ion-label><b>{{user?.name || "-"}}</b></ion-label><br>
+        </ion-col>
+        <ion-col size=1>
+          <ion-menu-toggle>
+            <ion-icon style="float: right; padding-right: 7px;" name="chevron-back"></ion-icon>
+          </ion-menu-toggle>
+        </ion-col>
+      </ion-row>
+      <ion-list class="menu-items" no-lines>
+        <ion-menu-toggle>
+          <ion-item lines="none" routerLink="/home" routerLinkActive="active-link">
+            <img src="../assets/icon/menu/home-icon.svg" width="16px" />&nbsp;
+            <ion-label class="menu-labels">Home</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item lines="none" [routerLink]="['/fuelent']" routerLinkActive="active-link">
+            <img src="../assets/icon/Group 383.svg" width="16px" />&nbsp;
+            <ion-label class="menu-labels">FuelEnts</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item lines="none" [routerLink]="['/fillings']" routerLinkActive="active-link">
+            <img src="../assets/icon/menu/Group 387.svg" width="16px" />&nbsp;
+            <ion-label class="menu-labels">Fillings</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item lines="none" [routerLink]="['/analytics']" routerLinkActive="active-link">
+            <img src="../assets/icon/menu/page.svg" width="16px" />&nbsp;
+            <ion-label class="menu-labels">Analytics</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item lines="none" [routerLink]="['/profile']" routerLinkActive="active-link">
+            <img src="../assets/icon/menu/user.svg" width="16px" />&nbsp;
+            <ion-label class="menu-labels">Profile</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+      </ion-list>
+    </ion-content>
+    <ion-footer class="ion-no-border">
+      <ion-toolbar>
+        <ion-menu-toggle>
+          <ion-item (click)="logout()">
+            <img src="../assets/icon/menu/logout.svg" width="16px" />&nbsp;
+            <ion-label class="menu-labels">Logout</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+      </ion-toolbar>
+    </ion-footer>
+  </ion-menu>
+  <ion-router-outlet id="main"></ion-router-outlet>
 </ion-app>

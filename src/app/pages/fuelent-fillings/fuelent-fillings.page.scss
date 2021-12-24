@@ -1,0 +1,89 @@
+.nav-logo {
+  padding-right: 7px;
+  float: right;
+  width: 2.2em;
+}
+
+.filling-detail {
+  color: #222428;
+  font-size: 0.9em;
+  padding: 0.5em;
+}
+
+.filling {
+  margin-top: -2%;
+}
+
+.orange {
+  height: 3.5em;
+  width: 0.5em;
+  margin-left: -2px;
+  background-color: rgb(235, 143, 57);
+}
+
+.vendor {
+  font-weight: 600;
+  padding-top: 1.5em;
+  color: #FF7810;
+  font-size: 1em;
+  text-transform: capitalize;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.quantity {
+  font-weight: 600;
+  padding-top: 1.8em;
+  color: #FF7810;
+  font-size: 0.9em;
+  text-transform: capitalize;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.address {
+  text-transform: capitalize;
+}
+
+.heading {
+  background-color: rgb(128, 128, 128);
+  height: 3em;
+  padding-left: 2%;
+  padding-top: 0.1px;
+  color: white;
+}
+
+.card-header {
+  background-color: white;
+  margin-top: -2%;
+  height: 4.1em;
+  margin-bottom: -2%;
+  border-bottom: 0.1px solid rgb(219, 219, 219);
+}
+
+.drop {
+  color: #222428;
+  font-size: 1.5em;
+  margin-bottom: -1em;
+}
+
+.status {
+  zoom: 1.4;
+  padding-top: 1em;
+  font-weight: bolder;
+}
+
+.card {
+  box-shadow: none;
+}
+
+.no-data {
+  padding-top: 8em;
+}
+
+.back {
+  padding-left: 7px;
+  zoom: 1.3;
+}

@@ -1,0 +1,43 @@
+<ion-content>
+  <img class="side-image" src="../../../assets/icon/Group 10357.jpg">
+  <div align="center">
+    <h2><b>TankUp Filling Station</b></h2>
+  </div>
+  <br>
+  <!-- <div text-left class="heading"><b>Login</b></div> -->
+  <div text-left class="sub-heading">Enter your registered mobile number</div>
+  <div text-left class="sub-heading">below to login.</div>
+  <br>
+  <div class="login">
+    <form class="form" [formGroup]="user" (ngSubmit)="sendOTP()">
+      <ion-input type="number" primary formControlName="phone_number" id="test" placeholder="Enter Number"></ion-input>
+      <ion-row class="container2">
+        <ion-col align="left">
+          <ion-label *ngIf="showResendTimer" class="timer">{{time | async}}</ion-label>
+        </ion-col>
+        <ion-col align="right">
+          <ion-button fill="clear" class="requestOTP" color="primary" *ngIf="showOTP" type="submit"
+            [disabled]="!resendEnable">
+            resend</ion-button>
+        </ion-col>
+      </ion-row>
+      <div class="otp" align="center">
+        <ng-otp-input *ngIf="showOTP" class="otp-input" (onInputChange)="onotpChange($event)"
+          [config]="{length:6, allowNumbersOnly:true}" type="number"></ng-otp-input>
+      </div>
+      <ion-button *ngIf="!showOTP" class="btn" expand="block" type="submit" [disabled]="!user.valid">
+        Request OTP
+      </ion-button>
+      <ion-button *ngIf="showOTP" class="btn" expand="block" [disabled]="otpLength!=6" (click)="verifyotp()">
+        Verify OTP
+      </ion-button>
+    </form>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar align="center">
+    <ion-label class="footer-msg">Don't have an account?<b class="signup" (click)="goToSignUp()">Sign up</b>
+    </ion-label>
+  </ion-toolbar>
+</ion-footer>

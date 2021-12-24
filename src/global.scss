@@ -24,3 +24,81 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+
+
+@font-face {
+  font-family: 'Poppins'; //This is what we are going to call
+  src: url('assets/font/Poppins/Poppins-Regular.ttf');
+}
+
+
+#test {
+  border-bottom: 1px solid black;
+  border-bottom: 1.5px solid rgba(0, 0, 0, 0.1);
+  background: #f6f6f6;
+  border-radius: 4px;
+}
+
+.error {
+  padding-left: 0;
+  color: red;
+  position: relative;
+}
+
+.menu {
+  padding-top: 0.6em;
+}
+
+.half-modal .modal-wrapper {
+  height: 50%;
+  top: 50%;
+  position: absolute;
+  display: block;
+}
+
+.confirm-modal .modal-wrapper {
+  height: 14.5em;
+  width: 95%;
+  border-radius: 4px;
+  position: absolute;
+  display: block;
+}
+
+ion-content {
+  --background: #f3f3f3;
+  font-family: Poppins !important;
+}
+
+ion-header ion-toolbar {
+  --background: #f3f3f3;
+}
+
+ion-label {
+  font-family: Poppins !important;
+}
+
+p {
+  font-family: Poppins !important;
+}
+
+b {
+  font-family: Poppins !important;
+}
+
+span {
+  font-family: Poppins !important;
+}
+
+ion-title {
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+ion-menu-button {
+  position: absolute;
+}
+
+ion-buttons {
+  position: absolute;
+}

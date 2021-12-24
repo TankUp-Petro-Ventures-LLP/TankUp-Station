@@ -1,0 +1,44 @@
+{
+  "menu": {
+    "title": "MENU",
+    "home": "Dashboard"
+  },
+  "home": {
+    "title": "Dashboard"
+  },
+  "login": {
+    "title": "लॉग इन करें",
+    "email": "ईमेल",
+    "password": "पासवर्ड",
+    "forgot_password": "पासवर्ड भूल गए",
+    "btn": "लॉग इन करें",
+    "email_login": "ईमेल का उपयोग कर लॉगिन करें",
+    "btn_otp": "ओटीपी भेजें",
+    "btn_verify_otp": "ओटीपी सत्यापित करें",
+    "mobile_no": "मोबाइल नंबर",
+    "otp": "ओटीपी",
+    "resend_otp": "ओटीपी पुनः भेजें"
+  },
+  "forgot_password": {
+    "title": "पासवर्ड भूल गए",
+    "email": "ईमेल",
+    "btn": "आगे बढ़ें"
+  },
+  "signup": {
+    "title": "साइन अप करें"
+  },
+  "sidebar": {
+    "home": "होम",
+    "settings": "सेटिंग्स"
+  },
+  "confirm_address": {
+    "header": "वितरण स्थान चुनें",
+    "confirmBtn": "स्थान की पुष्टि करें"
+  },
+  "tabs": {
+    "home": "होम",
+    "wishlist": "इच्छा-सूची",
+    "cart": "शॉपिंग कार्ट"
+  },
+  "loading": "कृपया प्रतीक्षा करें..."
+}

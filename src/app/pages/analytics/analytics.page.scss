@@ -1,0 +1,146 @@
+.nav-logo {
+  padding-right: 7px;
+  float: right;
+  width: 2.2em;
+}
+
+.info1 {
+  margin-top: 0%;
+  padding-bottom: 0%;
+  margin-bottom: 0%;
+}
+
+.info2 {
+  margin-top: -1em;
+  margin-bottom: 0%;
+}
+
+.card1 {
+  background-color: #6045C5;
+  padding-top: 1em;
+  font-size: 11px;
+  padding-bottom: 2em;
+  border-radius: 10px;
+  height: 70px;
+  width: 90%;
+}
+
+.card2 {
+  background-color: #61C877;
+  font-size: 11px;
+  padding-top: 1em;
+  border-radius: 10px;
+  padding-bottom: 2em;
+  height: 70px;
+  width: 90%;
+}
+
+.card3 {
+  background-color: #FF9B22;
+  padding-top: 1em;
+  font-size: 11px;
+  border-radius: 10px;
+  padding-bottom: 2em;
+  height: 70px;
+  width: 90%;
+}
+
+.card4 {
+  background-color: #FF6157;
+  font-size: 11px;
+  padding-top: 1em;
+  border-radius: 10px;
+  padding-bottom: 2em;
+  height: 70px;
+  width: 90%;
+}
+
+.label {
+  font-size: 0.9em;
+  color: white;
+}
+
+.value {
+  color: white;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.blur1 {
+  height: 3.5em;
+  width: 3.5em;
+  margin-left: 1em;
+  border-radius: 60px;
+  opacity: 0.3;
+  background-color: white;
+}
+
+.blur2 {
+  height: 3.5em;
+  width: 3.5em;
+  margin-top: -3em;
+  margin-left: 2em;
+  border-radius: 60px;
+  opacity: 0.3;
+  background-color: white;
+}
+
+.fuelent {
+  max-height: 8em;
+  display: flex;
+  margin-top: 0%;
+  overflow-y: auto;
+  flex-direction: column;
+}
+
+.fuelentData {
+  padding: 0%;
+  overflow: hidden;
+  overflow-y: auto;
+  height: 9em;
+}
+
+.table-header {
+  background-color: rgb(167, 164, 164);
+  font-weight: bold;
+}
+
+.no-data {
+  padding-left: 5%;
+  color: black;
+}
+
+.blank {
+  color: white;
+  border-right: rgb(206, 206, 206) 1px solid;
+}
+
+.heading {
+  border-right: rgb(206, 206, 206) 1px solid;
+  color: white;
+}
+
+.customer-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.sale-card {
+  margin-top: 4%;
+  width: 90%;
+  margin-left: 5%;
+  box-shadow: none;
+}
+
+.chart {
+  margin-top: 5%;
+}
+
+.container {
+  margin-top: 2%;
+}
+
+.saleQuantity {
+  padding-right: 5%;
+}

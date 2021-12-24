@@ -1,0 +1,62 @@
+.nav-logo {
+  padding-right: 7px;
+  float: right;
+  width: 2.2em;
+}
+
+.header {
+  background-color: rgb(88, 88, 88);
+  color: white;
+  padding-top: 0%;
+  padding-bottom: 0.2em;
+  padding-right: 0%;
+  padding-left: 2%;
+}
+
+.fuelents {
+  margin-top: 0em;
+}
+
+.fuelent-initial {
+  zoom: 0.5;
+  margin-top: 1.3em;
+}
+
+h6 {
+  padding-top: -5%;
+}
+
+.initial {
+  font-size: 2em;
+  font-weight: bolder;
+  color: #F76B1C;
+}
+
+.fuelent-detail {
+  color: #222428;
+  font-size: 0.8em;
+}
+
+.discount {
+  color: white;
+  font-size: 0.95em;
+  font-weight: bold;
+}
+
+.fuelent-name {
+  font-size: 0.95em;
+}
+
+.icons {
+  --background: transparent;
+  box-shadow: none !important;
+  zoom: 0.7;
+}
+
+.no-data {
+  padding-top: 8em;
+}
+
+.change {
+  zoom: 1.2;
+}
