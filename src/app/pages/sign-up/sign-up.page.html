@@ -11,7 +11,7 @@
     <span class="error ion-padding" *ngIf="isSubmitted && errorControl.name.errors?.required">
       Name is required.
     </span>
-    <ion-select id="test" formControlName="oil_company_id" placeholder="Oil Company">
+    <ion-select id="test" formControlName="oil_company_id" placeholder="Oil Company" mode="ios">
       <ion-select-option *ngFor="let oilCompany of oilCompanysList" value="{{ oilCompany?.id }}">{{ oilCompany.name }}
       </ion-select-option>
     </ion-select>
@@ -36,6 +36,13 @@
     <ion-input placeholder="Address" formControlName="address" id="test"></ion-input>
     <span class="error ion-padding" *ngIf="isSubmitted && errorControl.address.errors?.required">
       Address is required.
+    </span>
+    <ion-select id="test" formControlName="city_id" placeholder="City" mode="ios">
+      <ion-select-option *ngFor="let city of cityList" value="{{ city?.id }}">{{ city.name }}
+      </ion-select-option>
+    </ion-select>
+    <span class="error ion-padding" *ngIf="isSubmitted && errorControl.city_id.errors?.required">
+      Must have to select city.
     </span>
     <ion-input placeholder="Email" formControlName="email" id="test"></ion-input>
     <span class="error ion-padding" *ngIf="isSubmitted && errorControl.email.errors?.required">

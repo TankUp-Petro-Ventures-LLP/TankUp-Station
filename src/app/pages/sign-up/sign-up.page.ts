@@ -17,6 +17,7 @@ export class SignUpPage implements OnInit {
   oilCompanysList: any;
   isSubmitted= false;
   alreadyRegistered = false;
+  cityList: any;
 
   constructor(
     private navCtrl: NavController,
@@ -45,11 +46,13 @@ export class SignUpPage implements OnInit {
       address: ['', Validators.required],
       dealer_code: ['', Validators.required],
       oil_company_id: ['', Validators.required],
+      city_id: ['', Validators.required],
     });
    }
 
   async ngOnInit() {
     await this.getOilCompanies();
+    await this.getCities();
   }
 
   async getOilCompanies() {
@@ -57,6 +60,14 @@ export class SignUpPage implements OnInit {
       .getData(Config.API_URL + 'home/oil-company-list')
       .then((res) => {
         this.oilCompanysList = res['json'];
+      });
+  }
+
+  async getCities() {
+    return await this.apiTalk
+      .getData(Config.API_URL + 'home/city')
+      .then((res) => {
+        this.cityList = res['json'];
       });
   }
 
